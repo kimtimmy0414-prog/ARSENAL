@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APEXLUAARSENAL</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0a0015;
+      color: #cc99ff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      background: rgba(20, 0, 40, 0.7);
+      border-radius: 12px;
+      border: 1px solid #9900ff44;
+      max-width: 90%;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #cc00ff;
+      text-shadow: 0 0 15px #cc00ff;
+    }
+    .codebox {
+      background: #000;
+      border: 1px solid #6600cc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      font-family: Consolas, monospace;
+      font-size: 1.1rem;
+      color: #ddccff;
+      position: relative;
+      word-break: break-all;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #9900ff;
+      border: none;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .copy-btn:hover { background: #bb44ff; }
+    .status {
+      font-size: 0.95rem;
+      color: #88ffaa;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>APEXLUAARSENAL</h1>
+  
+  <div class="codebox" id="code">
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/kimtimmy0414-prog/Lua/refs/heads/main/Lua.lua"))()
+    <button class="copy-btn" onclick="copyCode()">복사</button>
+  </div>
+
+  <div class="status">Keyless • Arsenal OP • Undetected</div>
+</div>
+
+<script>
+function copyCode() {
+  const code = `loadstring(game:HttpGet("https://raw.githubusercontent.com/kimtimmy0414-prog/Lua/refs/heads/main/Lua.lua"))()`;
+  navigator.clipboard.writeText(code).then(() => {
+    alert("복사 완료! Executor에 붙여넣기 해!");
+  }).catch(() => {
+    alert("복사 실패 → 직접 선택해서 복사하세요.");
+  });
+}
+</script>
+
+</body>
+</html>
